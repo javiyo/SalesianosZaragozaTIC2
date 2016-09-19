@@ -1,0 +1,7 @@
+print ("Dime un numero?")
+num = raw_input()
+print "Tabla del " + num
+print "__________________"
+for i in range (1,11):
+    print (num + "x " + str(i) + " = " + str(int(num)*i))
+print "__________________"
