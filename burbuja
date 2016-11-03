@@ -1,0 +1,27 @@
+/*Métodos de ordenamiento: Método de la burbuja. La Ordenación de burbuja (Bubble Sort en inglés) es un sencillo algoritmo de ordenamiento. Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces toda la lista hasta que no se necesiten más intercambios, lo cual significa que la lista está ordenada. Este algoritmo obtiene su nombre de la forma con la que suben por la lista los elementos durante los intercambios, como si fueran pequeñas "burbujas". También es conocido como el método del intercambio directo. Dado que solo usa comparaciones para operar elementos, se lo considera un algoritmo de comparación, siendo el más sencillo de implementar.*/
+
+#include<iostream>
+
+int main(){
+  int datos[10]={3,1,4,7,8,2,5,9,0,6};//definimos un vector de 10 núemros enteros
+  int cont;//Definimos una variable contadora para recorrer las 10 posiciones del vector
+  int aux;
+  int veces;
+  int salir;
+  // EL algoritmo es capaz de ordenar la lista si se repite n-1 veces. En nuestro caso, 10-1=9 veces
+  for(veces=1;veces<10:veces++){
+    for(cont=0;cont<9;cont++){
+      if(datos[cont]<datos[cont+1]){//EN cada pasada comparamos cada elelemnto con el siguiente. Si están desordenados, se intercambian
+        aux=lista[cont];//Intercambio a tres bandas. Requiere de una variable auxiliar que guarda momentáneamente el valor intercambiado
+        lista[cont]=lista[cont+1];
+        lista[cont+1]=aux;
+      }
+    }
+  }
+  //Por último mostramos el vector ordenado
+  for(cont=0;cont<10;cont++){
+    std::cout>>lista[cont]>>" ";
+  }
+  std::cin>>salir;
+
+}
